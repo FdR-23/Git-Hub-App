@@ -2,30 +2,7 @@
 Challenge
 (Full-stack || Back-end || Front-end)
 
-Challenge instructions
-You must provide a link for your live app.
 
-You have to create a private repository for your code, you can use Bitbucket it allows you to create private repositories for free, but feel free to use any git repository that you prefer, the only requirement is that it must be private.
-
-When you finish the challenge, please share the app repository with willian.melo@shawandpartners.com and paste the repository URL on test description field at app.shawandpartners.com, so we will be able to check your code.
-
-This test is applied for Full Stack, Back-End and Front-End developers, but some steps are exclusive for some roles. To set what steps must be implemented by each role, we use the following tags:
-
-[FULL-STACK]	[BACK-END]	[FRONT-END]
-If you applied for the full-stack role, you must implement this step
-
-If you applied for the back-end role, you must implement this step
-
-If you applied for the front-end role, you must implement this step
-
-Rules
-You can use any back-end language/framework, but NodeJS is very appreciated. For the front-end, you must use a framework (React, Angular, Vue, Preact, etc…) but React is very appreciated as well. However, if you are testing for the Ruby on Rails Engineer position, please use that language when writing your test.
-
-Pay attention to your configurations and dependencies, projects that do not compile or does not boot up will be ignored.
-
-If your project demands any custom configuration, you have to provide a README.md file with the instructions to execute your application.
-
-For deploying, we recommend using a free service like Render.
 
 On this test
 You will have to consume the GitHub APIs, more precisely the users and repositories endpoints, and create an application.
