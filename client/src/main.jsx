@@ -4,9 +4,8 @@ import axios from 'axios'
 import App from './App'
 import './index.css'
 
-import UserProvider from './components/UserProvider'
-
-import Pagination from './services/pagination'
+import UserProvider from './components/UserProvider.jsx'
+import Pagination from './services/PaginationProvider.jsx'
 
 axios.defaults.baseURL = "http://localhost:3001"
 

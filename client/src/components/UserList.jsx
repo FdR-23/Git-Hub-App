@@ -11,8 +11,9 @@ const UserList = () => {
             <div className='grid grid-cols-6 border-b-2 border-stone-700 text-center font-semibold text-sm'>
                 <p className="mb-1"># ID</p>
                 <p className="mb-1">Avatar</p>
-                <p className="mb-1 col-span-3">Name</p>
-                <p className="mb-1">Url</p>
+                <p className="mb-1 col-span-2">Name</p>
+                <p className="mb-1">Details</p>
+                <p className="mb-1">Repos</p>
             </div>
 
 

@@ -1,22 +1,24 @@
 import React from "react";
-import UserList from "./components/userList.jsx";
-import { useUserContext } from "./components/UserProvider.jsx";
-import { usePageContext } from "./services/pagination.jsx";
+import Error from "./components/Error.jsx";
+import UserRespo from "./components/UserRespo.jsx";
+import UserDetails from "./components/UserDetails.jsx";
+import Home from "./page/Home.jsx";
+import NavBar from "./components/NavBar.jsx"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
-  const { nextPage } = usePageContext()
-  const { listUser } = useUserContext()
 
-
-  if (listUser == null) {
-    return <p>Loading</p>
-  }
 
   return (
-    <div >
-      <UserList />
-      {/* <button onClick={() => nextPage()}>siguiente</button> */}
-    </div>
+    <Router>
+      <NavBar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/detail/:username' element={<UserDetails />} />
+        <Route path='/repo/:username' element={<UserRespo />} />
+        <Route path='*' element={<Error />} />
+      </Routes>
+    </Router>
   )
 }
 export default App

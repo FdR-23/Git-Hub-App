@@ -29,7 +29,7 @@ const detailUser = async (req, res) => {
     try {
         const data = await octokit.request(`GET /users/${username}`, {
             username: username
-        })
+        }).then((info) => info.data)
         res
             .status(200)
             .json(data)
@@ -44,9 +44,10 @@ const repoUser = async (req, res) => {
     const { username } = req.params
     try {
         const data = await octokit.request(`GET /users/${username}/repos{?type,sort,direction,per_page,page}`, {
-            username: username
-
+            username: username,
+            per_page: 100
         })
+        .then((result)=> result.data)
         res
             .status(200)
             .json(data)

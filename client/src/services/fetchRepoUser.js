@@ -1,9 +1,9 @@
 import axios from "axios";
 
-const userDetails = async (username) => {
+const userRepo = async (username) => {
 
     try {
-        const info = await axios.get(`/api/users/${username}/details`)
+        const info = await axios.get(`/api/users/${username}/repos`)
             .then((info) => info.data)
         return info
     } catch (error) {
@@ -12,4 +12,4 @@ const userDetails = async (username) => {
 }
 
 
-export { userDetails }
+export { userRepo }

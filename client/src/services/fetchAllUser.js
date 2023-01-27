@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const allUser = async () => {
+const allUser = async () => {
     try {
         const info = await axios.get('/api/users')
             .then((info) => info.data)
@@ -12,7 +12,7 @@ export const allUser = async () => {
 }
 
 
-
+export { allUser }
 
 
 
