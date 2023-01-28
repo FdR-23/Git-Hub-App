@@ -11,7 +11,6 @@ function App() {
 
   return (
     <Router>
-      <NavBar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/detail/:username' element={<UserDetails />} />

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function UserItems({ element }) {
-  const { login, id, avatar_url, html_url } = element
+  const { login, id, avatar_url } = element
 
   return (
     <div className='grid grid-cols-6 gap-1 my-2  bg-stone-50/50 p-1 rounded-sm'>
