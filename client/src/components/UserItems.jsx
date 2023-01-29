@@ -14,9 +14,9 @@ function UserItems({ element }) {
 
       <div className=' flex items-center justify-center col-span-2 overflow-visible font-semibold'>{login}</div>
       <div className=' flex items-center justify-center  text-sm sm:text-base overflow-auto font-semibold'>
-        <Link className='text-blue-800' to={`/detail/${login}`} >Details</Link>
+        <Link className='text-blue-800 hover:underline' to={`/detail/${login}`} >Details</Link>
       </div>
-      <div className=' flex items-center justify-center text-sm sm:text-base overflow-auto font-semibold'>
+      <div className=' flex items-center hover:underline justify-center text-sm sm:text-base overflow-auto font-semibold'>
         <Link className='text-blue-800' to={`/repo/${login}`}>Repos</Link>
       </div>
       {/* 
