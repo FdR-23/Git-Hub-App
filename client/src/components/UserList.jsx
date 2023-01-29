@@ -7,15 +7,14 @@ const UserList = () => {
 
     const { listUser } = useUserContext();
     return (
-        <div className='bg-slate-900/10 rounded-sm w-full h-full my-2 p-2'>
-            <div className='grid grid-cols-6 border-b-2 border-stone-700 text-center font-semibold text-sm'>
-                <p className="mb-1"># ID</p>
-                <p className="mb-1">Avatar</p>
-                <p className="mb-1 col-span-2">Name</p>
-                <p className="mb-1">Details</p>
-                <p className="mb-1">Repos</p>
+        <div className='bg-slate-900/10 rounded-sm w-full sm:w-9/12 m-auto h-full my-2 p-2 '>
+            <div className='grid grid-cols-6  border-stone-700 text-center font-semibold text-sm'>
+                <p className="">ID</p>
+                <p className="">Avatar</p>
+                <p className=" col-span-2">Name</p>
+                <p className="">Details</p>
+                <p className="">Repos</p>
             </div>
-
 
             {listUser && listUser.map((elements) =>
                 <UserItems

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState, useMemo } from 'react'
 import { allUser } from '../services/fetchAllUser';
-
+import Pagination from './PaginationProvider';
 const userContext = React.createContext()
 
 export function useUserContext() {
@@ -18,7 +18,9 @@ function UserProvider({ children }) {
 
     return (
         <userContext.Provider value={{ listUser, setListUser }}>
-            {children}
+            <Pagination>
+                {children}
+            </Pagination>
         </userContext.Provider>
     )
 }
