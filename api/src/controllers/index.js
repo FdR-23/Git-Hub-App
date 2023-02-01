@@ -11,20 +11,38 @@ const allUser = async (req, res) => {
         const info = await octokit.request('GET /users{?since}', {
 
         })
+
         const linkHeader = info.headers.link;
         const links = parse(linkHeader);
         const list = info.data
 
         res
-            .status(200)
+            .status(202)
             .json({ list, links })
     } catch (error) {
         res
-            .status(400)
+            .status(404)
             .json({ message: `Data Not Found` })
     }
 }
 
+const searchUser = async (req, res) => {
+    const { username } = req.query
+
+    try {
+        const info = await octokit.request(`GET /users/${username}`, {
+            username: 'USERNAME'
+        }).then((data) => data)
+
+        res
+            .status(202)
+            .json(info)
+    } catch (error) {
+        res
+            .status(404)
+            .json({ message: `User Not Found` })
+    }
+}
 const detailUser = async (req, res) => {
     const { username } = req.params
     try {
@@ -67,5 +85,6 @@ const repoUser = async (req, res) => {
 module.exports = {
     allUser,
     detailUser,
-    repoUser
+    repoUser,
+    searchUser
 }

@@ -6,7 +6,7 @@ function UserItems({ element }) {
 
   return (
     <div className='grid grid-cols-6 gap-1 my-2  bg-stone-50/50 p-1 rounded-sm'>
-      <div className='flex items-center justify-center font-bold text-lg sm:text-xl text-slate-800'>{id}</div>
+      <div className='flex items-center justify-center font-bold text-lg sm:text-lg text-slate-800'>{id}</div>
 
       <div className='flex items-center justify-center'>
         <img className='w-12 rounded-full'
